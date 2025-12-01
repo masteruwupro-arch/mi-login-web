@@ -1,0 +1,12 @@
+auth.onAuthStateChanged(user => {
+if (!user) {
+// Si no está logeado, regresar al login
+window.location.href = "index.html";
+}
+});
+// Botón cerrar sesión
+document.getElementById("cerrar").addEventListener("click", () => {
+auth.signOut().then(() => {
+window.location.href = "index.html";
+});
+})

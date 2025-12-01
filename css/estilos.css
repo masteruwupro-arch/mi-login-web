@@ -1,0 +1,152 @@
+/* Paleta de Colores Sugerida */
+/* --color-primario: #007bff (Azul Vívido) */
+/* --color-secundario: #00bcd4 (Cian Brillante) */
+/* --color-fondo: #f4f7f6 (Gris Claro Suave) */
+/* --color-texto: #343a40 (Gris Oscuro) */
+
+/* --- Estilos Generales y del Cuerpo --- */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f6; /* Fondo gris claro suave */
+    color: #343a40; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    color: #007bff; /* Títulos en azul primario */
+    margin-bottom: 25px;
+}
+
+/* --- Estilo del Contenedor de Formulario (index.html) --- */
+
+#loginForm {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: fadeIn 1s ease-out; /* Animación de entrada */
+}
+
+/* --- Animación de Entrada General --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Estilos de Inputs --- */
+
+input[type="email"],
+input[type="password"] {
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* --- Estilos de Botones con Animaciones --- */
+
+button {
+    background-color: #007bff; /* Color primario */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Transición para hover y click */
+}
+
+button:hover {
+    background-color: #0056b3; /* Tono más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Pequeño levantamiento */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+button:active {
+    background-color: #004085; /* Tono más oscuro al presionar */
+    transform: scale(0.98); /* Efecto de hundimiento al presionar */
+}
+
+#cerrar {
+    background-color: #dc3545; /* Botón de Cerrar Sesión en rojo (peligro/acción secundaria) */
+}
+
+#cerrar:hover {
+    background-color: #c82333;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+}
+
+/* --- Mensaje de Error/Información --- */
+
+#mensaje {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* --- Estilos para home.html (Contenido Privado) --- */
+
+.contenido-privado {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    animation: slideIn 1s ease-out; /* Animación de entrada diferente */
+}
+
+/* Animación de Entrada de home.html */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Estilo para el Video (Multimedia) */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 20px 0;
+}
+
+.contenido-privado button {
+    margin-top: 20px;
+}
